@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5RDV4X47H7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5RDV4X47H7');
+</script>
+
+  <meta charset="utf-8">
+  <meta name="description" content="PMP">
+  <meta name="keywords" content="Humanoid robot">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Humanoid General Motion Tracking</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <!-- <link rel="stylesheet" href="./static/css/fontawesome.all.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
+  <script src="./static/js/isInViewport.min.js"></script>
+  <!-- <script defer src="./static/js/fontawesome.all.min.js"></script> -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./resources/favicon.ico">
+  
+  <script src="https://kit.fontawesome.com/006a5775d5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Related Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://lipschitz-constrained-policy.github.io">
+              Lipschitz-Constrained Policies
+            </a>
+            <a class="navbar-item" href="https://exbody2.github.io/">
+              ExBody2
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </nav>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+             <span style="font-weight: normal;"><bold><b>GMT</b></bold>: <br/><bold><b>G</b>eneral</bold> <b>M</b>otion <b>T</b>racking for </br>Humanoid Whole-Body Control <br>
+          </h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">
+              <a href="https://zixuan417.github.io">Zixuan Chen*</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://jimazeyu.github.io">Mazeyu Ji*</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://chengxuxin.github.io">Xuxin Cheng</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://xuanbinpeng.github.io">Xuanbin Peng</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <br/>
+              <a href="https://xbpeng.github.io">Xue Bin Peng†</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="https://xiaolonw.github.io">Xiaolong Wang†</a>
+              <br/>
+              <span style="font-size: 0.9em;">* Equal contribution &nbsp;&nbsp; † Equal advising</span>
+              <br><br>
+              <div style="display: flex; justify-content: center; align-items: center; gap: 40px; margin-top: 20px;">
+                <img src="./resources/UCSanDiegoLogo-BlueGold.png" width="20%">
+                <img src="./resources/sfu-logo.png" width="25%">
+              </div>
+            </span>
+            <!-- <span class="brmod">RSS 2025</span><br> -->
+          </div>
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="./resources/amo.pdf" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2505.03738" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>1x Videos</span>
+                </a>
+              </span> -->
+
+              <!-- <span class="link-block">
+                <a href=""
+                    class="external-link button is-normal is-rounded is-dark" target="_blank">
+                    <span class="icon">
+                      <i class="fab fa-bilibili"></i>
+                    </span>
+                    <span>Bilibili</span>
+                </a>
+              </span> -->
+              
+              <span class="link-block">
+                <a href="https://x.com/xuxin_cheng/status/1919722367817023779" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa-brands fa-x-twitter"></i>
+                  </span>
+                  <span>Summary</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/OpenTeleVision/AMO" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Model & Example</span>
+                </a>
+              </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom: 0">
+  <div class="container">
+    <div id="method_video" class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds no-bottom-padding">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+          <iframe 
+            src="https://www.youtube.com/embed/4mJCFZ--0sc?si=hnE-1-hSwsgwWGc0" 
+            title="YouTube video player" 
+            frameborder="0" 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid #bbb; border-radius: 10px;" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">AMO Teleoperation Interface</h2>
+        <h5 style="text-align: center; font-weight: normal;">We use multi-task IK to map 3 poses from a VR device to 18-dim commands (7 for each arm, roll, pitch, yaw of torso orientation, and base height) for the AMO controller to execute. (Played in 3x) </h5>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="col-12">
+                  <video playsinline autoplay loop muted controls src="./resources/clips/teleop/sbs-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                  <p style="text-align: center;"> Our teleoperation interface provides intuitive whole-body teleop for high-DoF robot control</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section> -->
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Long Range Composite Skills</h2>
+        <h5 style="text-align: center; font-weight: normal;">With GMT, we can deploy one policy to track different motions in real-world. </h5>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="col-12">
+                  <video playsinline autoplay loop muted controls src="./resources/clips/teleop/sbs-comp.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Dancing</h2>
+        <br>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/dance/dance-lafan-clip1-lllab.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                         
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/dance/dance-lafan-clip2-lllab.mp4" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/dance/dance-lafan-clip3-lllab.mp4" width="100%"
+                      style="border-radius:10px; "></video>    
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/dance/amass-dance1.mp4" width="100%"
+                      style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/dance/amass-dance2-salsa-kitchen.mp4" width="100%"
+                      style="border-radius:10px; "></video>    
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/dance/amass-dance3-slidestep-lllab.mp4" width="100%"
+                      style="border-radius:10px; "></video>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Agile Skills</h2>
+        <br>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/agile/puchkarate-kick-lllab.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                         
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/agile/airkick-stand-fah-floor.mp4" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/agile/kick-low-lllab.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/agile/kick-walk-llkitchen.mp4" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/agile/airkick-stand-lllab.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/agile/soccer-pass-lllab.mp4" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div>
+            
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Stylized Locomotion</h2>
+        <br>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/crouchwalk-lllab.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                         
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/punch-stand-fahoutdoor.mp4" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/loco-manip-lllab.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/kickball-fahfloor.mp4" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/drank-walk-llkitchen.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/spin-lllab.mp4" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/squatting-lllab.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/step-right-fahfloor.mp4" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/throw-lllab.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/stretch-fahoutdoor.mp4" width="90%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/walk1-lllab.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/warmup-lllab.mp4" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/walk3-lllab.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/locomotion/mtr-stomping-lllab.mp4" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div>
+            
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Failure Case</h2>
+        <br>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="col">
+                  <video autoplay muted loop playsinline controls src="./resources/clips/failures/freestyle-lllab-failure.mp4" width="100%"
+                         style="border-radius:10px; "></video>
+                         
+              </div>
+              <div class="col">
+                <video autoplay muted loop playsinline controls src="./resources/clips/failures/kick-push-lllab-fail.mp4" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+  
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The ability to track general whole-body motions in the real world is a useful way to build general-purpose humanoid robots.
+            However, achieving this can be challenging due to the temporal and kinematic diversity of the motions, the policy's capability, and the difficulty of coordination of the upper and lower bodies. 
+            To address these issues, we propose <b>GMT</b>, a general and scalable motion-tracking framework that trains a single unified policy to enable humanoid robots to track diverse motions in the real world. GMT is built upon two core components: an Adaptive Sampling strategy and a Motion Mixture-of-Experts (MoE) architecture. 
+            The Adaptive Sampling automatically balances easy and difficult motions during training. The MoE ensures better specialization of different regions of the motion manifold.
+            We show through extensive experiments in both simulation and the real world the effectiveness of GMT, achieving state-of-the-art performance across a broad spectrum of motions using a <i>unified general</i> policy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="titile">BibTeX</h2>
+    <pre><code>
+@article{chen2025gmt,
+title={GMT: General Motion Tracking for Humanoid Whole-Body Control},
+author={Chen, Zixuan and Ji, Mazeyu and Cheng, Xuxin and Peng, Xuanbin and Peng, Xue Bin and Wang, Xiaolong},
+journal={arXiv:2505.xxxx},
+year={2025}
+}
+</code></pre>
+  </div>
+</section>
+
+
+</body>
+
+<script>
+  var mainLoopId = setInterval(function(){
+        $('video').not('#teaser').each(function(){
+      if ($(this).is(":in-viewport")) {
+          $(this)[0].play();
+      } else {
+          $(this)[0].pause();
+      }
+      })
+    },200);
+</script>
+
+</html>
