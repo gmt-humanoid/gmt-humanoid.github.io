@@ -125,7 +125,7 @@
               
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com" target="_blank"
+                <a href="https://youtu.be/N3B-8BAta6Y?si=uR2NrFwnGccpHj7g" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -174,7 +174,7 @@
       <div class="column is-two-thirds no-bottom-padding">
         <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
           <iframe 
-            src="https://www.youtube.com/embed/vz0ZI0pvjU4?si=XIp-fc5iq9Nq0yMi" 
+            src="https://www.youtube.com/embed/N3B-8BAta6Y?si=68hx7h_qDSliYTpc" 
             title="YouTube video player" 
             frameborder="0" 
             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid #bbb; border-radius: 10px;" 
@@ -431,6 +431,30 @@
             The Adaptive Sampling automatically balances easy and difficult motions during training. The MoE ensures better specialization of different regions of the motion manifold.
             We show through extensive experiments in both simulation and the real world the effectiveness of GMT, achieving state-of-the-art performance across a broad spectrum of motions using a <i>unified general</i> policy.
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Q&A</h2>
+        <div class="content has-text-justified">
+          <b>Q:</b> What distinguishes GMT from previous works such as HumanPlus, OmniH2O, ExBody2, and ASAP?
+          <br>
+          <b>A:</b> HumanPlus and OmniH2O focus on loco-manipulation, exhibiting limited lower-body motion. 
+          ExBody2 operates on a small-scale manually curated motion dataset and requires fine-tuning for each motion category.
+          ASAP, on the other hand, emphasizes addressing sim-to-real gap in agile motion deployment, but relies on training separate policies for each single motion. 
+          While GMT is designed to be a general motion tracking framework, capable of tracking a wide range of motions with a single unified policy
+          with high fidelity.
+          <br><br>
+          <b>Q:</b> In certain videos, the performance appears inconsistent for the same motion. What could account for this discrepancy?
+          <br>
+          <b>A:</b> We have also observed this phenomenon. Although the same policy was used for recording all videos, 
+          the hardware condition significantly influences performance. Videos captured when the robot was relatively new exhibit behavior 
+          closely aligned with simulation. However, as the robot undergoes continued use, performance degrades due to hardware wear and tear.
         </div>
       </div>
     </div>
